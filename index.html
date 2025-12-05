@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Straighter UKZ - Pelurus Rambut Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+
+        :root {
+            --primary: #ff3366;
+            --secondary: #8a2be2;
+            --dark: #222222;
+            --light: #ffffff;
+            --text: #333333;
+            --sale: #ff4757;
+            --accent: #ff6b8b;
+            --bg: #f8f9fa;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .landing-container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+        }
+
+        .badge-corner {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 10px 25px;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 0 30px 30px 0;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-corner span {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .product-image-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+
+        .product-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .image-badge {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .image-badge i {
+            font-size: 14px;
+        }
+
+        /* Additional Product Images Section */
+        .additional-images-section {
+            padding: 20px;
+            background: white;
+        }
+
+        .additional-images-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .additional-images-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .additional-image {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #eee;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .additional-image:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .additional-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .additional-image.active {
+            border-color: var(--primary);
+        }
+
+        .additional-image.active::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 51, 102, 0.1);
+        }
+
+        /* Video thumbnail styling */
+        .additional-image.video-thumbnail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            position: relative;
+        }
+
+        .video-thumbnail i {
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .video-thumbnail::before {
+            content: 'Video Demo';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 10px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 2px 5px;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 30px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .product-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: rgba(255, 51, 102, 0.1);
+            color: var(--primary);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 51, 102, 0.2);
+        }
+
+        .product-description {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .features-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 14px;
+        }
+
+        .features-list i {
+            color: var(--primary);
+            margin-right: 12px;
+            font-size: 14px;
+            min-width: 20px;
+            margin-top: 2px;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-bottom: 25px;
+        }
+
+        .video-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .video-overlay i {
+            font-size: 50px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .video-overlay:hover i {
+            transform: scale(1.1);
+        }
+
+        .video-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .video-description {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        /* OrderOnline Embed Styles */
+        .ooef {
+            width: 100%;
+        }
+
+        .orderonline-embed-form {
+            width: 100%;
+            min-height: 60px;
+            position: relative;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f0f4ff 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .original-price {
+            font-size: 20px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .discount-badge {
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .stock-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .stock-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stock-item i {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .stock-item .label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stock-item .value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            margin-bottom: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            display: none;
+        }
+
+        .testimonial-card:nth-child(1),
+        .testimonial-card:nth-child(2) {
+            display: block;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--primary);
+            padding: 2px;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            color: var(--dark);
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .testimonial-info p {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Testimonial Navigation */
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .testimonial-nav-btn {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .testimonial-nav-btn.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .testimonial-nav-btn:hover {
+            background: var(--primary);
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .faq-question {
+            padding: 15px;
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 15px 15px 15px;
+            max-height: 300px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Footer Note */
+        .footer-note {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 0 0 25px 25px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer-note strong {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .landing-container {
+                border-radius: 20px;
+            }
+            
+            .product-image-container {
+                height: 350px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .product-title {
+                font-size: 24px;
+            }
+            
+            .current-price {
+                font-size: 32px;
+            }
+            
+            .video-player {
+                height: 200px;
+            }
+            
+            .additional-images-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-player {
+                height: 180px;
+            }
+            
+            .testimonial-card {
+                padding: 15px;
+            }
+            
+            .additional-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .additional-image {
+                height: 70px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .product-image-container {
+                height: 300px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .video-player {
+                height: 150px;
+            }
+            
+            .testimonial-card {
+                padding: 12px;
+            }
+            
+            .additional-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .additional-image {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="badge-corner">
+                TERLARIS <span>🔥</span>
+            </div>
+            
+            <div class="product-image-container">
+                <img src="https://cdn.wshopon.com/image/9604b07ae820278e3835ad322c3986c71ab13a16.jpeg" 
+                     alt="Hair Straighter UKZ - Pelurus Rambut Profesional" 
+                     class="product-image" 
+                     id="mainProductImage">
+                
+                <div class="product-image-badge">
+                    <div class="image-badge">
+                        <i class="fas fa-camera"></i>
+                        <span>8+ Gambar</span>
+                    </div>
+                    <div class="image-badge">
+                        <i class="fas fa-video"></i>
+                        <span>Video Demo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Product Images Section -->
+        <div class="additional-images-section">
+            <h3 class="additional-images-title">Lihat Gambar Lainnya</h3>
+            <div class="additional-images-grid" id="additionalImagesGrid">
+                <!-- Additional images will be loaded by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <h1 class="product-title">Hair Straighter UKZ</h1>
+            <p class="product-subtitle">Pelurus Rambut Profesional • Teknologi Ceramic • 5 Level Suhu</p>
+            
+            <div class="product-tags">
+                <span class="tag">⚡ Pemanasan Cepat</span>
+                <span class="tag">💎 Keramik Tourmaline</span>
+                <span class="tag">🔥 5 Level Suhu</span>
+                <span class="tag">⏱️ 30 Detik Panas</span>
+                <span class="tag">🔋 USB-C Charging</span>
+            </div>
+            
+            <p class="product-description">
+                Hair Straighter UKZ adalah pelurus rambut profesional dengan teknologi ceramic tourmaline yang melindungi rambut dari kerusakan. 
+                Dengan 5 level suhu yang dapat disesuaikan (140°C - 220°C), alat ini cocok untuk semua jenis rambut. 
+                Pemanasan super cepat hanya dalam 30 detik, dilengkapi dengan indikator digital dan teknologi ion negatif untuk hasil yang halus dan berkilau.
+            </p>
+            
+            <ul class="features-list">
+                <li><i class="fas fa-check-circle"></i> Teknologi Ceramic Tourmaline untuk rambut sehat</li>
+                <li><i class="fas fa-check-circle"></i> 5 Level suhu (140°C, 160°C, 180°C, 200°C, 220°C)</li>
+                <li><i class="fas fa-check-circle"></i> Pemanasan cepat hanya 30 detik</li>
+                <li><i class="fas fa-check-circle"></i> Pelat extra lebar 3.5cm untuk hasil maksimal</li>
+                <li><i class="fas fa-check-circle"></i> Teknologi ion negatif mengurangi frizz</li>
+                <li><i class="fas fa-check-circle"></i> Auto shut-off setelah 60 menit untuk keamanan</li>
+                <li><i class="fas fa-check-circle"></i> Charging USB-C dengan kabel 1.8 meter</li>
+            </ul>
+            
+            <!-- Video Section -->
+            <div class="video-section">
+                <div class="section-title">
+                    <i class="fas fa-video"></i> Video Demo Produk
+                </div>
+                <div class="video-container">
+                    <video class="video-player" id="demoVideo" preload="metadata">
+                        <source src="https://down-zl-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ke16-m3c4ul8kkel0e8.16003251733563554.mp4?v=1743045467" type="video/mp4">
+                        Browser Anda tidak mendukung video tag.
+                    </video>
+                    <div class="video-overlay" id="videoOverlay">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="video-title">Lihat Demo Penggunaan</div>
+                        <div class="video-description">Cara menggunakan Hair Straighter UKZ</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Section -->
+            <div class="pricing-section">
+                <div class="price-row">
+                    <div class="current-price">Rp 299.000</div>
+                    <div class="original-price">Rp 599.000</div>
+                    <div class="discount-badge">HEMAT 50%</div>
+                </div>
+                
+                <div class="stock-info">
+                    <div class="stock-item">
+                        <i class="fas fa-box"></i>
+                        <div class="label">Stok Tersedia</div>
+                        <div class="value">42 pcs</div>
+                    </div>
+                    <div class="stock-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <div class="label">Pengiriman</div>
+                        <div class="value">1-3 Hari</div>
+                    </div>
+                    <div class="stock-item">
+                        <i class="fas fa-users"></i>
+                        <div class="label">Terjual</div>
+                        <div class="value">850+ pcs</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Buttons - OrderOnline Embed -->
+            <div class="cta-buttons">
+                <!-- OrderOnline Embed Code - v8.0.4 -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="emma" data-product-slug="jjtf67grygdf567bv" data-product-id="69335769befaf8b29f079854" id="oo-embed-form-jjtf67grygdf567bv-7780" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader {
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    animation: ooLoadingIn 10s ease;
+                                    -webkit-animation: ooLoadingIn 10s ease;
+                                    animation-fill-mode: forwards;
+                                    overflow: hidden
+                                }
+                                @keyframes ooLoadingIn {
+                                    0% { visibility: hidden; opacity: 0 }
+                                    20% { visibility: visible; opacity: 0 }
+                                    100% { visibility: visible; opacity: 1 }
+                                }
+                                @-webkit-keyframes ooLoadingIn {
+                                    0% { visibility: hidden; opacity: 0 }
+                                    20% { visibility: visible; opacity: 0 }
+                                    100% { visibility: visible; opacity: 1 }
+                                }
+                                .ooef-loader>div,.ooef-loader>div:after {
+                                    border-radius: 50%;
+                                    width: 2.5rem;
+                                    height: 2.5rem
+                                }
+                                .ooef-loader>div {
+                                    font-size: 10px;
+                                    position: relative;
+                                    text-indent: -9999em;
+                                    border: .25rem solid #f5f5f5;
+                                    border-left: .25rem solid #55c4cf;
+                                    -webkit-transform: translateZ(0);
+                                    -ms-transform: translateZ(0);
+                                    transform: translateZ(0);
+                                    -webkit-animation: ooLoading 1.1s infinite linear;
+                                    animation: ooLoading 1.1s infinite linear
+                                }
+                                .ooef-loader.error>div {
+                                    border-left: .25rem solid #ff4500;
+                                    animation-duration: 5s
+                                }
+                                @-webkit-keyframes ooLoading {
+                                    0% { -webkit-transform: rotate(0); transform: rotate(0) }
+                                    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg) }
+                                }
+                                @keyframes ooLoading {
+                                    0% { -webkit-transform: rotate(0); transform: rotate(0) }
+                                    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg) }
+                                }
+                            </style>
+                            <div aria-live="polite" role="status">
+                                <div>Loading...</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Testimonials Section -->
+            <div class="testimonials-section">
+                <div class="section-title">
+                    <i class="fas fa-star"></i> Ulasan Pelanggan (850+)
+                </div>
+                
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" 
+                             alt="Sari Dewi" 
+                             class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Rina Melati</h4>
+                            <p>Jakarta • Pembeli Terverifikasi</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Rambut saya sangat keriting dan sulit diatur. Hair Straighter UKZ ini benar-benar penyelamat! 
+                        Hanya perlu 1 kali tarikan, rambut langsung lurus dan halus. Yang paling saya suka adalah tidak merusak rambut 
+                        meski dipakai setiap hari. Teknologi ceramic-nya memang beda!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" 
+                             alt="Maya Sari" 
+                             class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Dian Kusuma</h4>
+                            <p>Bandung • Hair Stylist</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Sebagai hair stylist profesional, saya sudah mencoba banyak pelurus rambut. 
+                        Hair Straighter UKZ ini yang terbaik! Pemanasannya cepat, pelatnya lebar sehingga menghemat waktu, 
+                        dan yang penting rambut klien tetap sehat. Sudah merekomendasikan ke banyak klien!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" 
+                             alt="Lisa Wijaya" 
+                             class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Lisa Wijaya</h4>
+                            <p>Surabaya • Karyawan Kantoran</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Saya selalu terburu-buru di pagi hari. Dengan Hair Straighter UKZ, styling rambut hanya butuh 5 menit! 
+                        Pemanasan 30 detik benar-benar nyata. Rambut saya yang tebal pun bisa diluruskan dengan sempurna. 
+                        Portable banget, bisa dibawa traveling juga!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/35.jpg" 
+                             alt="Budi Santoso" 
+                             class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Budi Santoso</h4>
+                            <p>Yogyakarta • Pembeli untuk Istri</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Membeli ini untuk hadiah ulang tahun istri. Dia sangat senang! Katanya ini yang paling bagus 
+                        dibandingkan pelurus rambut sebelumnya. Rambutnya jadi lebih berkilau dan tidak kering. 
+                        Pengiriman cepat dan packing aman. Worth every penny!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial Navigation -->
+                <div class="testimonial-nav" id="testimonialNav">
+                    <!-- Navigation dots will be added by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="section-title">
+                    <i class="fas fa-question-circle"></i> Pertanyaan yang Sering Diajukan
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Berapa lama waktu pemanasan?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Hair Straighter UKZ memiliki pemanasan super cepat hanya dalam 30 detik! 
+                        Anda bisa langsung menggunakan alat ini tanpa menunggu lama. Indikator digital akan menunjukkan ketika suhu sudah mencapai setting yang diinginkan.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Apakah aman untuk rambut rusak/rontok?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Ya, sangat aman! Hair Straighter UKZ menggunakan teknologi Ceramic Tourmaline dengan ion negatif 
+                        yang melindungi rambut dari kerusakan. Lapisan keramik menjaga kelembaban alami rambut dan mencegah kekeringan. 
+                        Dilengkapi juga dengan pengaturan suhu yang tepat sesuai jenis rambut Anda.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Berapa level suhu yang tersedia?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Terdapat 5 level suhu yang dapat disesuaikan: 140°C (rambut halus/tipis), 160°C (rambut normal), 
+                        180°C (rambut tebal), 200°C (rambut sangat tebal/keriting), dan 220°C (rambut ekstra keriting). 
+                        Anda bisa memilih suhu yang sesuai dengan jenis dan kondisi rambut Anda.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Apakah ada garansi?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Ya, produk ini dilengkapi dengan garansi resmi 1 tahun. Jika ada masalah dengan produk, 
+                        Anda bisa menghubungi customer service kami untuk proses klaim garansi. 
+                        Kami juga memberikan garansi uang kembali 30 hari jika produk tidak sesuai ekspektasi.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Note -->
+        <div class="footer-note">
+            ⚡ <strong>PERHATIAN:</strong> Stok terbatas! Harga spesial Rp 299.000 hanya untuk 50 pembeli pertama.
+            Harga normal kembali ke Rp 599.000 setelah kuota habis.
+        </div>
+    </div>
+
+    <script>
+        // Product images array
+        const productImages = [
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/9604b07ae820278e3835ad322c3986c71ab13a16.jpeg',
+                title: 'Hair Straighter UKZ - Tampak Depan'
+            },
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/d7ee0d3ba44805fe986aea709bef06f26c7cc5c7.jpeg',
+                title: 'Hair Straighter UKZ - Tampak Samping'
+            },
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/e68e13308d85e1d93decb57400cdf4c8037be7f7.jpeg',
+                title: 'Hair Straighter UKZ - Display Digital'
+            },
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/f21be8c25046ca0b49bb99476c799fb164698c62.jpeg',
+                title: 'Hair Straighter UKZ - Pelat Keramik'
+            },
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/3d85ec09a8cad5c0dbc3e05cb64db7e2ec8f68d3.jpeg',
+                title: 'Hair Straighter UKZ - Packaging'
+            },
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/cd97e0f757ee9376bfcceea6132748ae4cc84a53.jpeg',
+                title: 'Hair Straighter UKZ - Aksesori'
+            },
+            { 
+                type: 'image', 
+                url: 'https://cdn.wshopon.com/image/71fecbacc1a514d991f24f1295005b133d75f03f.jpeg',
+                title: 'Hair Straighter UKZ - Perbandingan Ukuran'
+            }
+        ];
+
+        // Video items
+        const videoItems = [
+            { 
+                url: 'https://down-zl-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ke16-m3c4ul8kkel0e8.16003251733563554.mp4?v=1743045467',
+                title: 'Demo Penggunaan Hair Straighter UKZ'
+            }
+        ];
+
+        const mainProductImage = document.getElementById('mainProductImage');
+        const additionalImagesGrid = document.getElementById('additionalImagesGrid');
+
+        // Initialize product images gallery
+        function initializeProductImages() {
+            // Clear existing additional images
+            additionalImagesGrid.innerHTML = '';
+            
+            // Add main image as first thumbnail
+            addImageThumbnail(productImages[0], 0, true);
+            
+            // Add remaining images (max 7 images to leave space for video)
+            for (let i = 1; i < Math.min(productImages.length, 7); i++) {
+                addImageThumbnail(productImages[i], i, false);
+            }
+            
+            // Add video thumbnail
+            if (videoItems.length > 0) {
+                addVideoThumbnail(videoItems[0], productImages.length);
+            }
+        }
+
+        function addImageThumbnail(imageData, index, isActive) {
+            const imageDiv = document.createElement('div');
+            imageDiv.className = 'additional-image';
+            if (isActive) imageDiv.classList.add('active');
+            
+            const img = document.createElement('img');
+            img.src = imageData.url;
+            img.alt = imageData.title;
+            img.loading = 'lazy';
+            
+            imageDiv.appendChild(img);
+            additionalImagesGrid.appendChild(imageDiv);
+            
+            // Add click event
+            imageDiv.addEventListener('click', () => {
+                // Update main image
+                mainProductImage.src = imageData.url;
+                mainProductImage.alt = imageData.title;
+                
+                // Update active state
+                document.querySelectorAll('.additional-image').forEach(img => {
+                    img.classList.remove('active');
+                });
+                imageDiv.classList.add('active');
+                
+                // Show notification
+                showNotification(`Menampilkan ${imageData.title}`);
+            });
+        }
+
+        function addVideoThumbnail(videoData, index) {
+            const videoDiv = document.createElement('div');
+            videoDiv.className = 'additional-image video-thumbnail';
+            
+            const videoIcon = document.createElement('i');
+            videoIcon.className = 'fas fa-play';
+            
+            videoDiv.appendChild(videoIcon);
+            additionalImagesGrid.appendChild(videoDiv);
+            
+            // Add click event for video
+            videoDiv.addEventListener('click', () => {
+                openVideoModal(videoData);
+            });
+        }
+
+        function openVideoModal(videoData) {
+            // Create video modal
+            const videoModal = document.createElement('div');
+            videoModal.className = 'video-modal';
+            videoModal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                z-index: 5000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            `;
+            
+            const videoContent = document.createElement('div');
+            videoContent.style.cssText = `
+                width: 100%;
+                max-width: 800px;
+                position: relative;
+            `;
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '✕';
+            closeBtn.style.cssText = `
+                position: absolute;
+                top: -40px;
+                right: 0;
+                background: white;
+                color: #222;
+                border: none;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                font-size: 20px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 5001;
+            `;
+            
+            const videoElement = document.createElement('video');
+            videoElement.style.cssText = `
+                width: 100%;
+                border-radius: 10px;
+                max-height: 80vh;
+            `;
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+            
+            const source = document.createElement('source');
+            source.src = videoData.url;
+            source.type = 'video/mp4';
+            
+            videoElement.appendChild(source);
+            videoContent.appendChild(closeBtn);
+            videoContent.appendChild(videoElement);
+            videoModal.appendChild(videoContent);
+            document.body.appendChild(videoModal);
+            
+            // Close functionality
+            const closeModal = () => {
+                videoElement.pause();
+                document.body.removeChild(videoModal);
+                document.body.style.overflow = 'auto';
+            };
+            
+            closeBtn.addEventListener('click', closeModal);
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    closeModal();
+                }
+            });
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            
+            // Handle escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        }
+
+        // Testimonial carousel functionality
+        let currentTestimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const testimonialNavContainer = document.getElementById('testimonialNav');
+
+        // Initialize testimonial navigation
+        function initializeTestimonialNav() {
+            // Clear existing navigation
+            testimonialNavContainer.innerHTML = '';
+            
+            // Create navigation dots
+            testimonials.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'testimonial-nav-btn';
+                if (index === currentTestimonialIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    currentTestimonialIndex = index;
+                    updateTestimonialDisplay();
+                });
+                testimonialNavContainer.appendChild(dot);
+            });
+            
+            // Auto rotate testimonials every 8 seconds
+            setInterval(() => {
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+                updateTestimonialDisplay();
+            }, 8000);
+        }
+
+        // Update testimonial display
+        function updateTestimonialDisplay() {
+            testimonials.forEach((testimonial, index) => {
+                if (index === currentTestimonialIndex || index === currentTestimonialIndex + 1) {
+                    testimonial.style.display = 'block';
+                } else {
+                    testimonial.style.display = 'none';
+                }
+            });
+            
+            // Update navigation dots
+            const dots = document.querySelectorAll('.testimonial-nav-btn');
+            dots.forEach((dot, index) => {
+                if (index === currentTestimonialIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            // Reset to first testimonial if at the end
+            if (currentTestimonialIndex >= testimonials.length - 1) {
+                currentTestimonialIndex = 0;
+            }
+        }
+
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Video functionality
+        const demoVideo = document.getElementById('demoVideo');
+        const videoOverlay = document.getElementById('videoOverlay');
+
+        videoOverlay.addEventListener('click', () => {
+            demoVideo.play();
+            videoOverlay.style.display = 'none';
+        });
+
+        demoVideo.addEventListener('pause', () => {
+            videoOverlay.style.display = 'flex';
+        });
+
+        // Load OrderOnline script
+        function loadOrderOnlineScript() {
+            // Add the embed script
+            const script = document.createElement('script');
+            script.innerHTML = `
+                if (typeof xLogError != 'function') {
+                    var xLogError = function (error) {
+                        var req = new XMLHttpRequest();
+                        var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                        var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                        req.open('POST', 'https://api.orderonline.id/log', true);
+                        req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                        req.send(params);
+                    };
+                }
+                try {
+                    if (typeof xEmbedScript != 'function') {
+                        var xEmbedScript = function () {
+                            !function(w, d, e, v, id, t, s) {
+                                if (d.getElementById(id)) return;
+                                t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                s = d.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t, s);
+                            }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                        };
+                    }
+                    if (typeof xEmbedInit != 'function') {
+                        var xEmbedInit = function (w, n) {
+                            if (w.ooe) return;
+                            n = w.ooe = function() {
+                                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                            };
+                            if (!w._ooe) w._ooe = n;
+                            n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                        };
+                    }
+                    xEmbedInit(window);
+                    ooe('setup', 'redirect', 'https://emma.orderonline.id');
+                    ooe('init', '5f16831a9d8e8e4fb67472e5', '69335769befaf8b29f079854', null, 'oo-embed-form-jjtf67grygdf567bv-7780', {
+                        "mode": "popup",
+                        "action": "Klik untuk pemesanan",
+                        "title": "Form Pemesanan",
+                        "triggerPixel": true,
+                        "triggerGtm": false
+                    });
+                    if (!window.jQuery) {
+                        !function(w, d, e, v, id, t, s) {
+                            if (d.getElementById(id)) return;
+                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                            t.addEventListener('load', xEmbedScript);
+                            s = d.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t, s);
+                        }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                    } else {
+                        xEmbedScript();
+                    }
+                } catch (e) {
+                    xLogError(e);
+                    throw e;
+                }
+            `;
+            
+            script.onload = function() {
+                console.log('OrderOnline script loaded successfully');
+            };
+            
+            script.onerror = function() {
+                console.error('Failed to load OrderOnline script');
+                showNotification('Gagal memuat form pemesanan. Silakan coba lagi.');
+            };
+            
+            document.head.appendChild(script);
+        }
+
+        // Load OrderOnline script when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(loadOrderOnlineScript, 1000);
+            initializeProductImages();
+            initializeTestimonialNav();
+        });
+
+        // Notification function
+        function showNotification(message) {
+            // Remove existing notification
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create new notification
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(45deg, var(--primary), var(--secondary));
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                z-index: 3000;
+                animation: slideIn 0.3s ease;
+                font-weight: 500;
+                max-width: 300px;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Add animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            .notification {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(45deg, var(--primary), var(--secondary));
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                z-index: 3000;
+                animation: slideIn 0.3s ease;
+                font-weight: 500;
+                max-width: 300px;
+            }
+            
+            .fa-spinner {
+                animation: spin 1s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
